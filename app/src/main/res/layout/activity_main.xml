@@ -8,36 +8,46 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/image_view_preview"
+<!--        <com.google.android.material.imageview.ShapeableImageView-->
+<!--            android:id="@+id/image_view_preview"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/text_view_result"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/text_view_result"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:gravity="center"-->
+<!--            android:maxLines="2"-->
+<!--            android:padding="16dp"-->
+<!--            android:text="QR Result: "-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/button_open_gallery"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHeight_default="wrap"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/text_view_result"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/text_view_result"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="2"
-            android:padding="16dp"
-            android:text="QR Result: "
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/button_open_gallery"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_default="wrap"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toTopOf="@id/button_open_gallery"/>
 
         <com.google.android.material.button.MaterialButton
+            app:layout_constraintTop_toBottomOf="@id/preview_view"
             android:id="@+id/button_open_gallery"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginVertical="24dp"
             android:text="Open Gallery"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -46,6 +56,5 @@
             app:layout_constraintHeight_default="wrap"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintWidth_default="wrap" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
